@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 
 const MovieCard = ({
- movie: {title, year, rating, image, type, description },
+ movie: {id,title, year, rating, posterURL, type, description },
 }) => {
   return (
     <div className="card">

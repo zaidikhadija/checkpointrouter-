@@ -15,14 +15,26 @@ const Home =() =>{
   
   
     const addNewMovie = (e,newMovie) => {
-      e.preventDefault()
+      e.preventDefault();
+      if (
+        newMovie.posterURL &&
+        newMovie.title &&
+        newMovie.year &&
+        newMovie.rating &&
+        newMovie.description
+
+      ) 
+{
       setMoviesList([...MoviesList, newMovie]);
-    };
+    }
+    else alert("please insert required informations")
+  };
+
     
 return (
     <div>
     <Route exact path="/" render={()=><App MoviesList={MoviesList} addNewMovie={addNewMovie} searchTitle={searchTitle} setSearchTitle={setSearchTitle} setRateSearch={setRateSearch} rateSearch={rateSearch}/>} />
-    <Route  path="/Description/:MoviesListId"  render={(props) => <Description {...props} MoviesList={MoviesList} />} />
+    <Route  path="/Description/:MovieCardId"  render={(props) => <Description {...props} MoviesList={MoviesList} />} />
     </div>)
     };
     export default Home;

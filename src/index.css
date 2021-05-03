@@ -88,15 +88,14 @@ img {
   font-family: 'Heebo';
   --bg-filter-opacity: 0.5;
   background-image: linear-gradient(rgba(0,0,0,var(--bg-filter-opacity)),rgba(0,0,0,var(--bg-filter-opacity))), var(--bg-img);
-  height:12em;
-  width: 25em;
-  font-size: 1.5em;
+  height: 25em;
+  width: 27em;
+  font-size: 0.85em;
   color:black;
-  border-radius: 1em;
-  padding: 1em;
+  border-radius: 1.5em;
+  padding: 1.5em;
   /*margin: 2em;*/
   display: flex;
-  flex-wrap: wrap;
   
   background-size: cover;
   background-position: center;
